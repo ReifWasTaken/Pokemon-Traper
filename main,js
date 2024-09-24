@@ -1,0 +1,9 @@
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+    res.end("Hola mundo, askasdaj");
+});
+
+server.listen(8080, () => {
+    console.log("Server runing at local port http://localhost:8080");
+});
