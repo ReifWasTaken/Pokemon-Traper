@@ -19,9 +19,9 @@ app.get('/pokemon', (req, res) => {
     const IdFound = pokemones.find((p) => p.id == reqID);
     
     if(IdFound){
-       return res.json(IdFound);
+       return res.status(200).json(IdFound);
     }else{
-       return res.json({error: "Pokemon not found"});
+       return res.status(400).json({error: "Pokemon not found"});
     }
   })
 
@@ -29,3 +29,4 @@ app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })
 
+//20:11 calse 7
