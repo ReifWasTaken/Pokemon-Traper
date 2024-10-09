@@ -2,7 +2,11 @@
   "name": "pokemontraper",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "main",
+=======
+  "main": "main.js",
+>>>>>>> fc521cf04c436330f804f5ac88f5b10157206099
   "type": "module",
   "scripts": {
     "start": "nodemon scr/main.js"
@@ -11,7 +15,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "express": "^4.21.0",
     "nodemon": "^3.1.7"
+=======
+    "express": "^4.21.0"
+>>>>>>> fc521cf04c436330f804f5ac88f5b10157206099
   }
 }
