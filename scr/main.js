@@ -78,7 +78,11 @@ app.delete('/pokemons/:id', (req, res) => {
   }
   pokemones = pokemones.filter((p) => p.id != reqID);
   return res.status(200).json({message: "pokemon deleted"});
-//asdasdasd
+
 })
 
-//clase 8
+app.get("*", (req, res) => {
+  return res.send(404).json({status: "error", message: "URL not found"});
+})
+
+//clase 8 23:06
