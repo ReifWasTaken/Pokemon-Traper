@@ -78,7 +78,7 @@ app.delete('/pokemons/:id', (req, res) => {
   }
   pokemones = pokemones.filter((p) => p.id != reqID);
   return res.status(200).json({message: "pokemon deleted"});
-//asd
+//asdasdasd
 })
 
 //clase 8
