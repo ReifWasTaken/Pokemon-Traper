@@ -1,4 +1,5 @@
 import express from "express";
+import { uploader } from "../utils.js";
 const pokemonsRouter = express.Router();
 
 //Pokemons persistans 
@@ -26,18 +27,19 @@ pokemonsRouter.get('/:id', (req, res) => {
     } else {
         return res.status(400).json({
             status: "Error",
-            message: "Pokemon not found " + reqID
+            message: "Pokemon not found" + reqID
         });
     }
 });
 
-pokemonsRouter.post("/", (req, res) => {
+pokemonsRouter.post("/", uploader.single("file"), (req, res) => {
 
     const pokemonSend = req.body;
     const idSend = pokemonSend.id;
     const pokemonFound = pokemones.find((p) => p.id == idSend);
 
     if (!pokemonFound) {
+        pokemonSend.picture = "http://localhost:3000/" + req.file.filename;
         pokemones.push({ ...pokemonSend });
         return res.status(201).json({ 
             status: "succes",
