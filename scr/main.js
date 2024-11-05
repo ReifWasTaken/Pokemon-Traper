@@ -29,7 +29,7 @@ app.get("*", (req, res) => {
   return res.status(404).json({status: "error", message: "URL not found"});
 });
 
-//clase 9
+//clase 9 48:45
 
 /* TO DO
   Upload an image via postman
