@@ -39,7 +39,7 @@ pokemonsRouter.post("/", uploader.single("file"), (req, res) => {
     const pokemonFound = pokemones.find((p) => p.id == idSend);
 
     if (!pokemonFound) {
-        pokemonSend.picture = "http://localhost:3000/" + req.file.filename;
+        pokemonSend.picture = "http://localhost:3000/" + req.file.filename; //upload image. TODO config in the user profile picture
         pokemones.push({ ...pokemonSend });
         return res.status(201).json({ 
             status: "succes",
